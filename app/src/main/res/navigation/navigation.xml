@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fristScreenFragment">
+
+    <fragment
+        android:id="@+id/fristScreenFragment"
+        android:name="com.iqbal.kmtest_mochammadiqbal.FristScreenFragment"
+        android:label="fragment_frist_screen"
+        tools:layout="@layout/fragment_frist_screen" >
+        <action
+            android:id="@+id/action_fristScreenFragment_to_secondScreenFragment"
+            app:destination="@id/secondScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreenFragment"
+        android:name="com.iqbal.kmtest_mochammadiqbal.SecondScreenFragment"
+        android:label="fragment_second_screen"
+        tools:layout="@layout/fragment_second_screen" >
+        <action
+            android:id="@+id/action_secondScreenFragment_to_thirdScreenFragment"
+            app:destination="@id/thirdScreenFragment" />
+        <action
+            android:id="@+id/action_secondScreenFragment_to_fristScreenFragment"
+            app:destination="@id/fristScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdScreenFragment"
+        android:name="com.iqbal.kmtest_mochammadiqbal.ThirdScreenFragment"
+        android:label="fragment_third_screen"
+        tools:layout="@layout/fragment_third_screen" />
+</navigation>
